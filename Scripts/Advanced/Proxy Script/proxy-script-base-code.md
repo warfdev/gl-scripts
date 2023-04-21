@@ -12,7 +12,7 @@ end
 
 
 
-function custom_command(type, packet) -- bu bizim kullanacagimiz hook olucak
+function custom_command(type, packet)
     
     clog = "action|input\n|text|"
     
