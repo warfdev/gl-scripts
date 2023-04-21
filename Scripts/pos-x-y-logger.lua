@@ -1,4 +1,5 @@
-### Code;
+## Code;
+
 ```lua
 function start()
   while true do
