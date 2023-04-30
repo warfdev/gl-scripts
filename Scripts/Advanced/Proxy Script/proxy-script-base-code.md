@@ -3,6 +3,31 @@
 ```lua
 -- wharf#8770
 
+-- new command function
+function newCommand(command)
+  local cmdName = command.name
+  local cmdCode = command.code
+  
+  if packet:find(clog .. cmdName) then
+    load(cmdCode)()
+    return true
+  end
+end
+--[[
+
+  - usage
+newCommand({
+  name =  "/helloworld",
+  code =  [[
+LogToConsole("im gay")
+]]
+})
+
+
+]]-- 
+
+
+
 
 scriptLog = "`2[SCRIPT] `o"
 
@@ -25,8 +50,19 @@ function custom_command(type, packet)
     if packet:find(clog .. "/proxy") then
         log([[Proxy Commands >> /selam
         ]])
+        return true
     end
     
+
+    newCommand({
+        name = "/gay",
+        code = [[
+          user = GetLocal().name
+          LogToConsole(user .. " gay")
+        ]]
+    })
+
+
     return false
 end
 
