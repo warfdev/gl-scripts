@@ -3,19 +3,6 @@
 ```lua
 -- wharf#8770
 
--- new command function
-function newCommand(command)
-  local cmdName = command.name
-  local cmdCode = command.code
-  
-  if packet:find(clog .. cmdName) then
-    LogToConsole("`6 "..cmdName)
-    load(cmdCode)()
-    return true
-  end
-end
-
-
 
 
 scriptLog = "`2[SCRIPT] `o"
@@ -28,6 +15,18 @@ end
 
 function custom_command(type, packet)
     
+    -- new command function
+    function newCommand(command)
+      local cmdName = command.name
+      local cmdCode = command.code
+  
+      if packet:find(clog .. cmdName) then
+        LogToConsole("`6 "..cmdName)
+        load(cmdCode)()
+        return true
+      end
+    end
+
     clog = "action|input\n|text|"
     
     -- example basic commands
