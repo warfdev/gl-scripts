@@ -9,6 +9,7 @@ function newCommand(command)
   local cmdCode = command.code
   
   if packet:find(clog .. cmdName) then
+    LogToConsole("`6 "..cmdName)
     load(cmdCode)()
     return true
   end
