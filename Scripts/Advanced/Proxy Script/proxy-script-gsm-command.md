@@ -1,10 +1,5 @@
 ### Code;
-* s
-- s
-  - s
-    - sa
-      - hh
-        - s
+* (visual)
 ```lua
 newCommand({
   name = "/gsm",
