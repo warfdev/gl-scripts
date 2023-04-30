@@ -15,6 +15,9 @@ end
 
 function custom_command(type, packet)
     
+
+    clog = "action|input\n|text|"
+    
     -- new command function
     function newCommand(command)
       local cmdName = command.name
@@ -27,8 +30,7 @@ function custom_command(type, packet)
       end
     end
 
-    clog = "action|input\n|text|"
-    
+
     -- example basic commands
     if packet:find(clog .. "/selam" ) then
         SendPacket(2, "action|input\n|text|Selam `2"..GetLocal().name.."`0!")
