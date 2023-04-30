@@ -13,18 +13,6 @@ function newCommand(command)
     return true
   end
 end
---[[
-
-  - usage
-newCommand({
-  name =  "/helloworld",
-  code =  [[
-LogToConsole("im gay")
-]]
-})
-
-
-]]-- 
 
 
 
