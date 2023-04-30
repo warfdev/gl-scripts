@@ -12,7 +12,7 @@ newCommand({
       str = msg
       LogToConsole("`4 ** Global System Message: `0" .. str)
     end
-    GlobalSystenMessage(msg)
+    GlobalSystemMessage(msg)
   ]]
 })
 ```
