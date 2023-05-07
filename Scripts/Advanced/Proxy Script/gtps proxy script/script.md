@@ -189,6 +189,10 @@ function on_events(type, packet)
     end
     
     
+    return true
+  end
+    
+    
     if packet:find(clog .. "/modsdetect") then
       ulog("/modsdetect")
       if commands.modsdetect == false then
@@ -236,4 +240,5 @@ end
 -- hooks
 AddHook(on_events, "OnSendPacket")
 AddHook(on_variant, "OnVariant")
+
 ```
