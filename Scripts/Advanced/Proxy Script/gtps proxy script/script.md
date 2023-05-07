@@ -1,3 +1,4 @@
+### READ UPDATES - `SC-INFO.md`
 ```lua
 -- main vars
 proxy = {}
