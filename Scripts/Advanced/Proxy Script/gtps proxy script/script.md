@@ -1,3 +1,4 @@
+```lua
 -- main vars
 proxy = {}
 proxy.cmd = "`6[PS-PROXY] `o"
@@ -234,3 +235,4 @@ end
 -- hooks
 AddHook(on_events, "OnSendPacket")
 AddHook(on_variant, "OnVariant")
+```
